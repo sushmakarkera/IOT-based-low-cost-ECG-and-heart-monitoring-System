@@ -1,6 +1,10 @@
 # IOT-based-low-cost-ECG-and-heart-monitoring-System
 AIM: To provide accessible and continuous remote monitoring of a person’s cardiac health.
 
+INTRODUCTION:
+
+IoT-based low-cost ECG monitoring system offers a transformative solution for democratizing access to cardiac care. By leveraging the power of the Internet of Things, this system provides continuous and affordable monitoring of the heart's electrical activity.
+
 OBJECTIVE:
 
 *Early Detection of Cardiac Issues
@@ -89,7 +93,53 @@ MINDMAP:
 
 ![Screenshot 2023-11-20 100327](https://github.com/sushmakarkera/IOT-based-low-cost-ECG-and-heart-monitoring-System/assets/149661660/097f95bf-60cc-4d30-b25d-46db1b7482cf)
 
+Working
+
 FLOWCHART:
 
 ![flowchart](https://github.com/sushmakarkera/IOT-based-low-cost-ECG-and-heart-monitoring-System/assets/149661660/37d5d1ce-e78b-48d7-91ae-169d3befa4c4)
+
+Algorithm:
+STEP1: Include Libraries
+•	Include necessary libraries such as ‘WiFi.h’, ‘WiFiUdp.h’, ‘PubSubClient.h’ and ‘NTPClient.h’.
+
+STEP 2: Define constants
+•	Define constants for WIFI credentials, variable labels, device label and sensor pin.
+
+STEP 3: Global variables
+•	Declare global variable for MQTT broker, payload, topic and various time-related variables.
+
+STEP 4: Main functions
+•	Implement the ‘setup()’ function
+•	Connect to WiFi 
+•	Set sensor pin as INPUT
+•	Implement the ‘loop()’ function
+•	Check if MQTT client is connected; if not, attempt to reconnect
+•	Increment a counter variable ‘j’
+•	Construct MQTT topic using device label
+•	Publish the payload
+
+STEP 5: Data formatting
+•	Format sensor reading and time stamp as strings
+•	Utilize ‘printf’ to construct the MQTT payload 
+
+STEP 6: Publish Data
+•	Publish the constructed payload
+
+STEP 7: Delay
+•	Introduce the delay of 150 millisecond between sensor reading
+
+STEP 8: Serial Output
+•	Output relevant information to the serial monitor for debugging and monitoring.
+
+Block Diagram:
+
+![image](https://github.com/sushmakarkera/IOT-based-low-cost-ECG-and-heart-monitoring-System/assets/149661660/56b16e59-03c0-4550-9664-14fd3fe5ad3a)
+
+Circuit Diagram:
+
+![circuit](https://github.com/sushmakarkera/IOT-based-low-cost-ECG-and-heart-monitoring-System/assets/149661660/1f2c64eb-9405-40e2-9319-aeeb3fe88735)
+
+
+
 
